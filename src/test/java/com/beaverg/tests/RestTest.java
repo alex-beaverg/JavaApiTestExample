@@ -1,8 +1,8 @@
 package com.beaverg.tests;
 ;
+import com.beaverg.base.BaseTest;
 import com.beaverg.domain.Product;
 import com.beaverg.utils.JsonReader;
-import com.beaverg.utils.PropertyGetter;
 import com.beaverg.utils.ServiceActions;
 import com.beaverg.utils.custom_exceptions.JsonValidateException;
 import io.qameta.allure.Description;
@@ -19,16 +19,7 @@ import java.io.File;
 
 @Epic("Dummy json API website testing")
 @Feature("CRUD operations testing")
-public class RestTest {
-    private final String homeUrl;
-    private final String urlGetPostfix;
-    private final String urlPostPostfix;
-
-    public RestTest() {
-        homeUrl = PropertyGetter.getProperty("home_url");
-        urlGetPostfix = PropertyGetter.getData("url_get_postfix");
-        urlPostPostfix = PropertyGetter.getData("url_post_postfix");
-    }
+public class RestTest extends BaseTest {
 
     @Test
     @Description("Verifying Status code and Response of GET method test")
