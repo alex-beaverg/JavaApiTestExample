@@ -3,7 +3,7 @@ package com.beaverg.tests;
 import com.beaverg.domain.Product;
 import com.beaverg.utils.JsonReader;
 import com.beaverg.utils.PropertyGetter;
-import com.beaverg.utils.RequestBodyPutting;
+import com.beaverg.utils.ServiceActions;
 import com.beaverg.utils.custom_exceptions.JsonValidateException;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -51,14 +51,14 @@ public class RestTest {
         SoftAssert sa = new SoftAssert();
         File jsonRequestFile = new File("src/test/resources/data_json/post.json");
         Product expectedProduct = JsonReader.validateAndReadFile(jsonRequestFile, Product.class);
-        JSONObject requestBody = RequestBodyPutting.putRequestBody(expectedProduct);
+        JSONObject requestBody = ServiceActions.putRequestBody(expectedProduct);
         RequestSpecification request = RestAssured.given();
         request.header("Content-Type", "application/json");
         request.body(requestBody.toString());
         Response response = request.post(homeUrl + urlPostPostfix);
         sa.assertEquals(response.getStatusCode(), 200, "Status code isn't equal to 200");
 
-        Product  actualProduct = JsonReader.validateAndReadInputStream(response.asInputStream(), Product.class);
+        Product actualProduct = JsonReader.validateAndReadInputStream(response.asInputStream(), Product.class);
         sa.assertEquals(actualProduct, expectedProduct, "Products aren't equal!");
 
         sa.assertAll();

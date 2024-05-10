@@ -4,7 +4,7 @@ import org.json.JSONObject;
 
 import java.lang.reflect.Field;
 
-public class RequestBodyPutting {
+public class ServiceActions {
     public static <T> JSONObject putRequestBody(T object) {
         JSONObject requestBody = new JSONObject();
         Field[] fields = object.getClass().getDeclaredFields();
