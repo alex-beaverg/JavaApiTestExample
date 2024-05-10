@@ -1,6 +1,5 @@
 package com.beaverg.listeners;
 
-import io.qameta.allure.Allure;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.ITestListener;
@@ -27,7 +26,6 @@ public class TestNGListener implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        Allure.addAttachment("Message", String.format("Test '%s' was completed successfully!", result.getName()));
         PRINTLN.info(String.format(ANSI_GREEN + "Test '%s' was completed successfully!", result.getName()));
         PRINTLN.info(ANSI_RESET);
     }
@@ -40,7 +38,6 @@ public class TestNGListener implements ITestListener {
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        Allure.addAttachment("Message", String.format("Test '%s' was skipped!", result.getName()));
         PRINTLN.info(String.format(ANSI_YELLOW + "Test '%s' was skipped!", result.getName()));
         PRINTLN.info(ANSI_RESET);
     }

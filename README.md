@@ -5,6 +5,8 @@
 - Java
 - Rest-Assured
 - Jackson processor
+- Generic
+- Reflection
 - OOP
 - TestNG
 - Log4j

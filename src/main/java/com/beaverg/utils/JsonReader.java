@@ -22,7 +22,7 @@ public class JsonReader {
         } catch (JacksonException e) {
             throw new JsonValidateException(String.format("[JsonValidateException]: JSON file '%s' is not valid!", fileName));
         } catch (IOException e) {
-            throw new JsonValidateException(String.format("[XsdValidateException]: JSON file '%s' was not found!", fileName));
+            throw new JsonValidateException(String.format("[IOException]: JSON file '%s' was not found!", fileName));
         }
         return value;
     }
