@@ -41,3 +41,4 @@
 2024-05-11 19:08:11,955 ERROR c.b.l.TestNGListener [TestNG-test=CRUD operations testing-1] Test 'putTest' was failed!
 2024-05-11 19:15:04,035 ERROR c.b.l.TestNGListener [TestNG-test=CRUD operations testing-1] Test 'putTest' was failed!
 2024-05-11 19:24:31,983 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API testing-1] Test 'putTest' was failed!
+2024-05-11 19:28:10,761 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!

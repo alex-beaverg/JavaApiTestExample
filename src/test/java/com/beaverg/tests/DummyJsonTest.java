@@ -48,7 +48,7 @@ public class DummyJsonTest {
     @Test
     @Description("Verifying Status code and Response of GET method test")
     public void getTest() throws JsonValidateException {
-        String path = "src/test/resources/data_json/get.json";
+        String path = "src/test/resources/data_json/dummy_json/get.json";
         Response response = given()
                 .when().get(urlGetPostfix)
                 .then().statusCode(200)
@@ -61,7 +61,7 @@ public class DummyJsonTest {
     @Test
     @Description("Verifying Status code and Response of POST method test")
     public void postTest() throws JsonValidateException {
-        String path = "src/test/resources/data_json/post.json";
+        String path = "src/test/resources/data_json/dummy_json/post.json";
         Product expectedObject = JsonReader.readFile(new File(path), Product.class);
         Response response = given()
                 .when().contentType(ContentType.JSON)
@@ -76,7 +76,7 @@ public class DummyJsonTest {
     @Test
     @Description("Verifying Status code and Response of PUT method test")
     public void putTest() throws JsonValidateException {
-        String path = "src/test/resources/data_json/put.json";
+        String path = "src/test/resources/data_json/dummy_json/put.json";
         Product expectedObject = JsonReader.readFile(new File(path), Product.class);
         Response response = given()
                 .when().body(ServiceActions.putRequestBody(expectedObject).toString())
