@@ -12,7 +12,7 @@ import static com.beaverg.utils.Printers.*;
 
 public class JsonReader {
 
-    public static <T> T validateAndReadFile(File jsonFile, Class<T> clazz) throws JsonValidateException {
+    public static <T> T readFile(File jsonFile, Class<T> clazz) throws JsonValidateException {
         T value;
         String fileName = jsonFile.getName();
         ObjectMapper mapper = new ObjectMapper();
@@ -27,7 +27,7 @@ public class JsonReader {
         return value;
     }
 
-    public static <T> T validateAndReadInputStream(InputStream json, Class<T> clazz) throws JsonValidateException {
+    public static <T> T readIS(InputStream json, Class<T> clazz) throws JsonValidateException {
         T value;
         ObjectMapper mapper = new ObjectMapper();
         try {

@@ -1,9 +1,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="Dummy json API website testing" verbose="1" parallel="tests" thread-count="1">
-    <test name="CRUD operations testing" parallel="methods" thread-count="1">
+<suite name="API CRUD operations testing" verbose="1" parallel="tests" thread-count="1">
+    <test name="'dummyjson.com' API testing" parallel="methods" thread-count="1">
         <classes>
-            <class name="com.beaverg.tests.RestTest"/>
+            <class name="com.beaverg.tests.DummyJsonTest"/>
         </classes>
     </test>
 </suite>

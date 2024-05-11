@@ -1,8 +1,11 @@
-package com.beaverg.domain;
+package com.beaverg.domain.dummy_json;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.List;
 import java.util.Objects;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Product {
     private int id;
     private String title;
@@ -119,11 +122,31 @@ public class Product {
                 Objects.equals(title, product.title) &&
                 Objects.equals(description, product.description) &&
                 Objects.equals(brand, product.brand) &&
-                Objects.equals(category, product.category);
+                Objects.equals(category, product.category) &&
+                Objects.equals(thumbnail, product.thumbnail) &&
+                Objects.equals(images, product.images);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, description, price, discountPercentage, rating, stock, brand, category);
+        return Objects.hash(id, title, description, price, discountPercentage, rating, stock, brand, category,
+                thumbnail, images);
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", discountPercentage=" + discountPercentage +
+                ", rating=" + rating +
+                ", stock=" + stock +
+                ", brand='" + brand + '\'' +
+                ", category='" + category + '\'' +
+                ", thumbnail='" + thumbnail + '\'' +
+                ", images=" + images +
+                '}';
     }
 }

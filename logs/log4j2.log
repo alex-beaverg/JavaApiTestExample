@@ -1,2 +1,43 @@
-2024-05-10 20:32:50,977 ERROR c.b.l.TestNGListener [main] Test 'postTest' was failed!
-2024-05-10 21:00:39,952 ERROR c.b.l.TestNGListener [TestNG-test=CRUD operations testing-1] Test 'postTest' was failed!
+2024-05-11 16:42:58,114 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-11 16:56:38,320 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-11 17:03:19,174 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-11 17:08:56,330 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-11 17:09:30,124 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-11 17:11:50,586 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-11 17:12:30,469 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-11 17:14:01,751 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-11 17:14:53,214 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-11 17:19:19,102 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-11 17:20:23,529 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-11 17:23:04,179 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-11 17:24:48,827 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-11 17:38:46,645 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 17:59:05,596 ERROR c.b.l.TestNGListener [main] Test 'postTest' was failed!
+2024-05-11 18:01:45,434 ERROR c.b.l.TestNGListener [main] Test 'postTest' was failed!
+2024-05-11 18:02:33,967 ERROR c.b.l.TestNGListener [main] Test 'postTest' was failed!
+2024-05-11 18:11:25,486 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:13:08,834 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:16:27,778 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:17:50,172 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:27:44,879 ERROR c.b.l.TestNGListener [main] Test 'postTest' was failed!
+2024-05-11 18:28:20,036 ERROR c.b.l.TestNGListener [main] Test 'postTest' was failed!
+2024-05-11 18:30:06,486 ERROR c.b.l.TestNGListener [main] Test 'postTest' was failed!
+2024-05-11 18:32:00,548 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:35:22,034 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:36:06,893 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:36:50,438 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:37:58,587 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:38:13,932 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:38:52,786 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:40:19,757 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:41:08,431 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:41:47,533 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:41:57,399 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:42:30,463 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:47:37,836 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:56:14,453 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 18:56:30,805 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 19:01:59,032 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-11 19:08:11,955 ERROR c.b.l.TestNGListener [TestNG-test=CRUD operations testing-1] Test 'putTest' was failed!
+2024-05-11 19:15:04,035 ERROR c.b.l.TestNGListener [TestNG-test=CRUD operations testing-1] Test 'putTest' was failed!
+2024-05-11 19:24:31,983 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API testing-1] Test 'putTest' was failed!

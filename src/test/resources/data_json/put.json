@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "title": "Men Shoes",
+  "description": "2024 New Balance Winter Men Shoes 580",
+  "price": 48,
+  "discountPercentage": 14.15,
+  "rating": 4.87,
+  "stock": 26,
+  "brand": "New Balance",
+  "category": "men-shoes",
+  "thumbnail": "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg",
+  "images": [
+    "https://cdn.dummyjson.com/product-images/25/1.jpeg",
+    "https://cdn.dummyjson.com/product-images/25/2.jpg"
+  ]
+}
