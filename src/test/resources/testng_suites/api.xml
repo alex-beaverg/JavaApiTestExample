@@ -6,4 +6,9 @@
             <class name="com.beaverg.tests.DummyJsonTest"/>
         </classes>
     </test>
+    <test name="'jsonplaceholder.typicode.com' API testing" parallel="methods" thread-count="1">
+        <classes>
+            <class name="com.beaverg.tests.JsonPlaceHolderTest"/>
+        </classes>
+    </test>
 </suite>

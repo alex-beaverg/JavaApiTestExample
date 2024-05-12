@@ -1,21 +1,19 @@
 package com.beaverg.utils;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 import org.json.JSONObject;
-
-import java.lang.reflect.Field;
 
 public class ServiceActions {
     public static <T> JSONObject putRequestBody(T object) {
-        JSONObject requestBody = new JSONObject();
-        Field[] fields = object.getClass().getDeclaredFields();
-        for (Field field : fields) {
-            try {
-                field.setAccessible(true);
-                requestBody.put(field.getName(), field.get(object));
-            } catch (IllegalAccessException e) {
-                throw new RuntimeException(e);
-            }
+        ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+        String json;
+        try {
+            json = ow.writeValueAsString(object);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
         }
-        return requestBody;
+        return new JSONObject(json);
     }
 }

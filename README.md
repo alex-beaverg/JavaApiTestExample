@@ -3,12 +3,11 @@
 ---
 
 - Java
+- TestNG
 - Rest-Assured
 - Jackson processor
 - Generic
-- Reflection
 - OOP
-- TestNG
 - Log4j
 - Allure
 - Listener

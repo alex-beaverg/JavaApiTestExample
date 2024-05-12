@@ -1,0 +1,23 @@
+{
+  "id": 7,
+  "name": "Alexi",
+  "username": "Angler",
+  "email": "a.angler@home.com",
+  "address": {
+    "street": "Main",
+    "suite": "Suite 22",
+    "city": "Berlin",
+    "zipcode": "2225",
+    "geo": {
+      "lat": "22.2356",
+      "lng": "66.0001"
+    }
+  },
+  "phone": "(255)456-78-56",
+  "website": "alexi-angler.info",
+  "company": {
+    "name": "Well",
+    "catchPhrase": "We are ready!",
+    "bs": "something"
+  }
+}

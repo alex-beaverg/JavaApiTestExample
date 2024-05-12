@@ -1,11 +1,8 @@
 package com.beaverg.domain.dummy_json;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.util.List;
 import java.util.Objects;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Product {
     private int id;
     private String title;
@@ -131,22 +128,5 @@ public class Product {
     public int hashCode() {
         return Objects.hash(id, title, description, price, discountPercentage, rating, stock, brand, category,
                 thumbnail, images);
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", price=" + price +
-                ", discountPercentage=" + discountPercentage +
-                ", rating=" + rating +
-                ", stock=" + stock +
-                ", brand='" + brand + '\'' +
-                ", category='" + category + '\'' +
-                ", thumbnail='" + thumbnail + '\'' +
-                ", images=" + images +
-                '}';
     }
 }
