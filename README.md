@@ -6,6 +6,7 @@
 - TestNG
 - Rest-Assured
 - Jackson processor
+- Jenkins
 - Generic
 - OOP
 - Log4j
