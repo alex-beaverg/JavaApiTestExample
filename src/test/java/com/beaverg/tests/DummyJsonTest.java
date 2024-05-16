@@ -30,6 +30,10 @@ public class DummyJsonTest {
     private final String urlPostPostfix = PropertyGetter.getData("dummy_json_post");
     private final String urlPutPostfix = PropertyGetter.getData("dummy_json_put");
     private final String urlDelPostfix = PropertyGetter.getData("dummy_json_del");
+    private final String path = PropertyGetter.getData("dummy_json_filepath");
+    private final String getPath = path + PropertyGetter.getData("get_name");
+    private final String postPath = path + PropertyGetter.getData("post_name");
+    private final String putPath = path + PropertyGetter.getData("put_name");
 
     @BeforeMethod(alwaysRun = true)
     public void setup() {
@@ -48,12 +52,11 @@ public class DummyJsonTest {
     @Test
     @Description("Verifying Status code and Response of GET method test")
     public void getTest() throws JsonValidateException {
-        String path = "src/test/resources/data_json/dummy_json/get.json";
         Response response = given()
                 .when().get(urlGetPostfix)
                 .then().statusCode(200)
                 .and().extract().response();
-        Product expectedObject = JsonReader.readFile(new File(path), Product.class);
+        Product expectedObject = JsonReader.readFile(new File(getPath), Product.class);
         Product actualObject = JsonReader.readIS(response.asInputStream(), Product.class);
         Assert.assertEquals(actualObject, expectedObject, "Objects aren't equal!");
     }
@@ -61,8 +64,7 @@ public class DummyJsonTest {
     @Test
     @Description("Verifying Status code and Response of POST method test")
     public void postTest() throws JsonValidateException {
-        String path = "src/test/resources/data_json/dummy_json/post.json";
-        Product expectedObject = JsonReader.readFile(new File(path), Product.class);
+        Product expectedObject = JsonReader.readFile(new File(postPath), Product.class);
         Response response = given()
                 .when().contentType(ContentType.JSON)
                 .and().body(ServiceActions.putRequestBody(expectedObject).toString())
@@ -76,8 +78,7 @@ public class DummyJsonTest {
     @Test
     @Description("Verifying Status code and Response of PUT method test")
     public void putTest() throws JsonValidateException {
-        String path = "src/test/resources/data_json/dummy_json/put.json";
-        Product expectedObject = JsonReader.readFile(new File(path), Product.class);
+        Product expectedObject = JsonReader.readFile(new File(putPath), Product.class);
         Response response = given()
                 .when().contentType(ContentType.JSON)
                 .when().body(ServiceActions.putRequestBody(expectedObject).toString())

@@ -30,6 +30,10 @@ public class JsonPlaceHolderTest {
     private final String urlPostPostfix = PropertyGetter.getData("json_placeholder_post");
     private final String urlPutPostfix = PropertyGetter.getData("json_placeholder_put");
     private final String urlDelPostfix = PropertyGetter.getData("json_placeholder_del");
+    private final String path = PropertyGetter.getData("json_placeholder_filepath");
+    private final String getPath = path + PropertyGetter.getData("get_name");
+    private final String postPath = path + PropertyGetter.getData("post_name");
+    private final String putPath = path + PropertyGetter.getData("put_name");
 
     @BeforeMethod(alwaysRun = true)
     public void setup() {
@@ -48,12 +52,11 @@ public class JsonPlaceHolderTest {
     @Test
     @Description("Verifying Status code and Response of GET method test")
     public void getTest() throws JsonValidateException {
-        String path = "src/test/resources/data_json/json_placeholder/get.json";
         Response response = given()
                 .when().get(urlGetPostfix)
                 .then().statusCode(200)
                 .and().extract().response();
-        User expectedObject = JsonReader.readFile(new File(path), User.class);
+        User expectedObject = JsonReader.readFile(new File(getPath), User.class);
         User actualObject = JsonReader.readIS(response.asInputStream(), User.class);
         Assert.assertEquals(actualObject, expectedObject, "Objects aren't equal!");
     }
@@ -61,8 +64,7 @@ public class JsonPlaceHolderTest {
     @Test
     @Description("Verifying Status code and Response of POST method test")
     public void postTest() throws JsonValidateException {
-        String path = "src/test/resources/data_json/json_placeholder/post.json";
-        User expectedObject = JsonReader.readFile(new File(path), User.class);
+        User expectedObject = JsonReader.readFile(new File(postPath), User.class);
         Response response = given()
                 .when().contentType(ContentType.JSON)
                 .and().body(ServiceActions.putRequestBody(expectedObject).toString())
@@ -76,8 +78,7 @@ public class JsonPlaceHolderTest {
     @Test
     @Description("Verifying Status code and Response of PUT method test")
     public void putTest() throws JsonValidateException {
-        String path = "src/test/resources/data_json/json_placeholder/put.json";
-        User expectedObject = JsonReader.readFile(new File(path), User.class);
+        User expectedObject = JsonReader.readFile(new File(putPath), User.class);
         Response response = given()
                 .when().contentType(ContentType.JSON)
                 .when().body(ServiceActions.putRequestBody(expectedObject).toString())
