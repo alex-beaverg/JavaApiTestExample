@@ -1,2 +1,4 @@
 2024-05-16 14:14:17,819 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API testing-1] Test 'putTest' was failed!
 2024-05-16 14:52:59,292 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API testing-1] Test 'putTest' was failed!
+2024-05-16 14:58:47,805 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API testing-1] Test 'putTest' was failed!
+2024-05-16 15:00:00,332 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API testing-1] Test 'putTest' was failed!

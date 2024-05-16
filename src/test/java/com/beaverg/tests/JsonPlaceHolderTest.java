@@ -25,19 +25,20 @@ import static io.restassured.RestAssured.given;
 @Epic("API CRUD operations testing")
 @Feature("'jsonplaceholder.typicode.com' API testing")
 public class JsonPlaceHolderTest {
-    private final String jsonPlaceholderUrl = PropertyGetter.getProperty("json_placeholder_url");
+    private final String url = PropertyGetter.getProperty("json_placeholder_url");
+    private final String path = PropertyGetter.getProperty("json_placeholder_filepath");
+
     private final String urlGetPostfix = PropertyGetter.getData("json_placeholder_get");
     private final String urlPostPostfix = PropertyGetter.getData("json_placeholder_post");
     private final String urlPutPostfix = PropertyGetter.getData("json_placeholder_put");
     private final String urlDelPostfix = PropertyGetter.getData("json_placeholder_del");
-    private final String path = PropertyGetter.getData("json_placeholder_filepath");
     private final String getPath = path + PropertyGetter.getData("get_name");
     private final String postPath = path + PropertyGetter.getData("post_name");
     private final String putPath = path + PropertyGetter.getData("put_name");
 
     @BeforeMethod(alwaysRun = true)
     public void setup() {
-        RestAssured.baseURI = jsonPlaceholderUrl;
+        RestAssured.baseURI = url;
     }
 
     @AfterMethod(alwaysRun = true)

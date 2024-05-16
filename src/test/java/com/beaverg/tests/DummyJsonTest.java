@@ -26,11 +26,12 @@ import static io.restassured.RestAssured.*;
 @Feature("'dummyjson.com' API testing")
 public class DummyJsonTest {
     private final String dummyJsonUrl = PropertyGetter.getProperty("dummy_json_url");
+    private final String path = PropertyGetter.getProperty("dummy_json_filepath");
+
     private final String urlGetPostfix = PropertyGetter.getData("dummy_json_get");
     private final String urlPostPostfix = PropertyGetter.getData("dummy_json_post");
     private final String urlPutPostfix = PropertyGetter.getData("dummy_json_put");
     private final String urlDelPostfix = PropertyGetter.getData("dummy_json_del");
-    private final String path = PropertyGetter.getData("dummy_json_filepath");
     private final String getPath = path + PropertyGetter.getData("get_name");
     private final String postPath = path + PropertyGetter.getData("post_name");
     private final String putPath = path + PropertyGetter.getData("put_name");
