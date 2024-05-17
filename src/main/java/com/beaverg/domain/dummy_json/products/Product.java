@@ -1,4 +1,4 @@
-package com.beaverg.domain.dummy_json;
+package com.beaverg.domain.dummy_json.products;
 
 import java.util.List;
 import java.util.Objects;

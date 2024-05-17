@@ -1,14 +1,24 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="API CRUD operations testing" verbose="1" parallel="tests" thread-count="1">
-    <test name="'dummyjson.com' API testing" parallel="methods" thread-count="1">
+    <test name="'dummyjson.com' API products testing" parallel="methods" thread-count="1">
         <classes>
-            <class name="com.beaverg.tests.DummyJsonTest"/>
+            <class name="com.beaverg.tests.DummyJsonProductsTest"/>
         </classes>
     </test>
-    <test name="'jsonplaceholder.typicode.com' API testing" parallel="methods" thread-count="1">
+    <test name="'dummyjson.com' API users testing" parallel="methods" thread-count="1">
         <classes>
-            <class name="com.beaverg.tests.JsonPlaceHolderTest"/>
+            <class name="com.beaverg.tests.DummyJsonUsersTest"/>
+        </classes>
+    </test>
+    <test name="'jsonplaceholder.typicode.com' API users testing" parallel="methods" thread-count="1">
+        <classes>
+            <class name="com.beaverg.tests.JsonPlaceholderUsersTest"/>
+        </classes>
+    </test>
+    <test name="'jsonplaceholder.typicode.com' API photos testing" parallel="methods" thread-count="1">
+        <classes>
+            <class name="com.beaverg.tests.JsonPlaceholderPhotosTest"/>
         </classes>
     </test>
 </suite>

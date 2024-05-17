@@ -1,6 +1,6 @@
 package com.beaverg.tests;
 
-import com.beaverg.domain.json_placeholder.User;
+import com.beaverg.domain.json_placeholder.users.User;
 import com.beaverg.utils.JsonReader;
 import com.beaverg.utils.PropertyGetter;
 import com.beaverg.utils.ServiceActions;
@@ -23,10 +23,10 @@ import java.io.File;
 import static io.restassured.RestAssured.given;
 
 @Epic("API CRUD operations testing")
-@Feature("'jsonplaceholder.typicode.com' API testing")
-public class JsonPlaceHolderTest {
-    private final String url = PropertyGetter.getProperty("json_placeholder_url");
-    private final String path = PropertyGetter.getProperty("json_placeholder_filepath");
+@Feature("'jsonplaceholder.typicode.com' API users testing")
+public class JsonPlaceholderUsersTest {
+    private final String url = PropertyGetter.getProperty("json_placeholder_users_url");
+    private final String path = PropertyGetter.getProperty("json_placeholder_users_filepath");
 
     private final String urlGetPostfix = PropertyGetter.getData("json_placeholder_get");
     private final String urlPostPostfix = PropertyGetter.getData("json_placeholder_post");

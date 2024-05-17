@@ -1,12 +1,12 @@
-package com.beaverg.domain.json_placeholder;
+package com.beaverg.domain.dummy_json.users;
 
 import java.util.Objects;
 
-public class Geo {
+public class Coordinates {
     private double lat;
     private double lng;
 
-    public Geo() { }
+    public Coordinates() { }
 
     public double getLat() {
         return lat;
@@ -28,9 +28,9 @@ public class Geo {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Geo geo = (Geo) o;
-        return Double.compare(geo.lat, lat) == 0 &&
-                Double.compare(geo.lng, lng) == 0;
+        Coordinates that = (Coordinates) o;
+        return Double.compare(that.lat, lat) == 0 &&
+                Double.compare(that.lng, lng) == 0;
     }
 
     @Override

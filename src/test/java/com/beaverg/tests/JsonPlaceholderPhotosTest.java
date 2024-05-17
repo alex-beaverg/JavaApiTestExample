@@ -1,6 +1,6 @@
 package com.beaverg.tests;
 
-import com.beaverg.domain.dummy_json.Product;
+import com.beaverg.domain.json_placeholder.photos.Photo;
 import com.beaverg.utils.JsonReader;
 import com.beaverg.utils.PropertyGetter;
 import com.beaverg.utils.ServiceActions;
@@ -20,25 +20,25 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.given;
 
 @Epic("API CRUD operations testing")
-@Feature("'dummyjson.com' API testing")
-public class DummyJsonTest {
-    private final String dummyJsonUrl = PropertyGetter.getProperty("dummy_json_url");
-    private final String path = PropertyGetter.getProperty("dummy_json_filepath");
+@Feature("'jsonplaceholder.typicode.com' API photos testing")
+public class JsonPlaceholderPhotosTest {
+    private final String url = PropertyGetter.getProperty("json_placeholder_photos_url");
+    private final String path = PropertyGetter.getProperty("json_placeholder_photos_filepath");
 
-    private final String urlGetPostfix = PropertyGetter.getData("dummy_json_get");
-    private final String urlPostPostfix = PropertyGetter.getData("dummy_json_post");
-    private final String urlPutPostfix = PropertyGetter.getData("dummy_json_put");
-    private final String urlDelPostfix = PropertyGetter.getData("dummy_json_del");
+    private final String urlGetPostfix = PropertyGetter.getData("json_placeholder_get");
+    private final String urlPostPostfix = PropertyGetter.getData("json_placeholder_post");
+    private final String urlPutPostfix = PropertyGetter.getData("json_placeholder_put");
+    private final String urlDelPostfix = PropertyGetter.getData("json_placeholder_del");
     private final String getPath = path + PropertyGetter.getData("get_name");
     private final String postPath = path + PropertyGetter.getData("post_name");
     private final String putPath = path + PropertyGetter.getData("put_name");
 
     @BeforeMethod(alwaysRun = true)
     public void setup() {
-        RestAssured.baseURI = dummyJsonUrl;
+        RestAssured.baseURI = url;
     }
 
     @AfterMethod(alwaysRun = true)
@@ -57,36 +57,36 @@ public class DummyJsonTest {
                 .when().get(urlGetPostfix)
                 .then().statusCode(200)
                 .and().extract().response();
-        Product expectedObject = JsonReader.readFile(new File(getPath), Product.class);
-        Product actualObject = JsonReader.readIS(response.asInputStream(), Product.class);
+        Photo expectedObject = JsonReader.readFile(new File(getPath), Photo.class);
+        Photo actualObject = JsonReader.readIS(response.asInputStream(), Photo.class);
         Assert.assertEquals(actualObject, expectedObject, "Objects aren't equal!");
     }
 
     @Test
     @Description("Verifying Status code and Response of POST method test")
     public void postTest() throws JsonValidateException {
-        Product expectedObject = JsonReader.readFile(new File(postPath), Product.class);
+        Photo expectedObject = JsonReader.readFile(new File(postPath), Photo.class);
         Response response = given()
                 .when().contentType(ContentType.JSON)
                 .and().body(ServiceActions.putRequestBody(expectedObject).toString())
                 .when().post(urlPostPostfix)
-                .then().statusCode(200)
+                .then().statusCode(201)
                 .and().extract().response();
-        Product actualObject = JsonReader.readIS(response.asInputStream(), Product.class);
+        Photo actualObject = JsonReader.readIS(response.asInputStream(), Photo.class);
         Assert.assertEquals(actualObject, expectedObject, "Objects aren't equal!");
     }
 
     @Test
     @Description("Verifying Status code and Response of PUT method test")
     public void putTest() throws JsonValidateException {
-        Product expectedObject = JsonReader.readFile(new File(putPath), Product.class);
+        Photo expectedObject = JsonReader.readFile(new File(putPath), Photo.class);
         Response response = given()
                 .when().contentType(ContentType.JSON)
                 .when().body(ServiceActions.putRequestBody(expectedObject).toString())
                 .when().put(urlPutPostfix)
                 .then().statusCode(200)
                 .and().extract().response();
-        Product actualObject = JsonReader.readIS(response.asInputStream(), Product.class);
+        Photo actualObject = JsonReader.readIS(response.asInputStream(), Photo.class);
         Assert.assertEquals(actualObject, expectedObject, "Objects aren't equal!");
     }
 

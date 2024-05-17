@@ -1,4 +1,4 @@
-package com.beaverg.domain.json_placeholder;
+package com.beaverg.domain.json_placeholder.users;
 
 import java.util.Objects;
 
