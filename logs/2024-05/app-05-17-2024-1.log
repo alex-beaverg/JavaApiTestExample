@@ -1,0 +1,25 @@
+2024-05-17 10:35:06,087 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API products testing-1] Test 'putTest' was failed!
+2024-05-17 10:54:05,231 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API products testing-1] Test 'getTest' was failed!
+2024-05-17 10:54:05,855 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API products testing-1] Test 'postTest' was failed!
+2024-05-17 10:54:06,439 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API products testing-1] Test 'putTest' was failed!
+2024-05-17 10:56:54,297 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API products testing-1] Test 'putTest' was failed!
+2024-05-17 11:32:59,980 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-17 11:32:59,989 ERROR c.b.l.TestNGListener [main] Test 'postTest' was failed!
+2024-05-17 11:32:59,998 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-17 11:36:03,210 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-17 11:36:03,232 ERROR c.b.l.TestNGListener [main] Test 'postTest' was failed!
+2024-05-17 11:36:03,243 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-17 11:38:50,050 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-17 11:38:50,060 ERROR c.b.l.TestNGListener [main] Test 'postTest' was failed!
+2024-05-17 11:38:50,071 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-17 11:42:32,797 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-17 11:42:32,806 ERROR c.b.l.TestNGListener [main] Test 'postTest' was failed!
+2024-05-17 11:42:32,814 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-17 11:53:44,561 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-17 11:53:45,171 ERROR c.b.l.TestNGListener [main] Test 'postTest' was failed!
+2024-05-17 11:53:45,779 ERROR c.b.l.TestNGListener [main] Test 'putTest' was failed!
+2024-05-17 11:55:44,008 ERROR c.b.l.TestNGListener [main] Test 'getTest' was failed!
+2024-05-17 11:57:44,221 ERROR c.b.l.TestNGListener [main] Test 'postTest' was failed!
+2024-05-17 12:01:38,485 ERROR c.b.l.TestNGListener [main] Test 'postTest' was failed!
+2024-05-17 12:08:24,770 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API products testing-1] Test 'putTest' was failed!
+2024-05-17 17:31:43,036 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API products testing-1] Test 'putTest' was failed!

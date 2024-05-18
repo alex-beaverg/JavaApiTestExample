@@ -3,22 +3,22 @@
 <suite name="API CRUD operations testing" verbose="1" parallel="tests" thread-count="1">
     <test name="'dummyjson.com' API products testing" parallel="methods" thread-count="1">
         <classes>
-            <class name="com.beaverg.tests.DummyJsonProductsTest"/>
+            <class name="com.beaverg.tests.dummy_json.ProductsTest"/>
         </classes>
     </test>
     <test name="'dummyjson.com' API users testing" parallel="methods" thread-count="1">
         <classes>
-            <class name="com.beaverg.tests.DummyJsonUsersTest"/>
+            <class name="com.beaverg.tests.dummy_json.UsersTest"/>
         </classes>
     </test>
     <test name="'jsonplaceholder.typicode.com' API users testing" parallel="methods" thread-count="1">
         <classes>
-            <class name="com.beaverg.tests.JsonPlaceholderUsersTest"/>
+            <class name="com.beaverg.tests.json_placeholder.UsersTest"/>
         </classes>
     </test>
     <test name="'jsonplaceholder.typicode.com' API photos testing" parallel="methods" thread-count="1">
         <classes>
-            <class name="com.beaverg.tests.JsonPlaceholderPhotosTest"/>
+            <class name="com.beaverg.tests.json_placeholder.PhotosTest"/>
         </classes>
     </test>
 </suite>

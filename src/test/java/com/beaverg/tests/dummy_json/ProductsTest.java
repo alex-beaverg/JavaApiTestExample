@@ -1,6 +1,6 @@
-package com.beaverg.tests;
+package com.beaverg.tests.dummy_json;
 
-import com.beaverg.domain.dummy_json.users.User;
+import com.beaverg.domain.dummy_json.products.Product;
 import com.beaverg.utils.JsonReader;
 import com.beaverg.utils.PropertyGetter;
 import com.beaverg.utils.ServiceActions;
@@ -20,13 +20,13 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 
 @Epic("API CRUD operations testing")
-@Feature("'dummyjson.com' API users testing")
-public class DummyJsonUsersTest {
-    private final String url = PropertyGetter.getProperty("dj.users_url");
-    private final String path = PropertyGetter.getProperty("dj.users_path");
+@Feature("'dummyjson.com' API products testing")
+public class ProductsTest {
+    private final String url = PropertyGetter.getProperty("dj.products_url");
+    private final String path = PropertyGetter.getProperty("dj.products_path");
 
     private final String getUrl = PropertyGetter.getData("dj.get");
     private final String postUrl = PropertyGetter.getData("dj.post");
@@ -57,36 +57,36 @@ public class DummyJsonUsersTest {
                 .when().get(getUrl)
                 .then().statusCode(200)
                 .and().extract().response();
-        User expectedObject = JsonReader.readFile(new File(getPath), User.class);
-        User actualObject = JsonReader.readIS(response.asInputStream(), User.class);
+        Product expectedObject = JsonReader.readFile(new File(getPath), Product.class);
+        Product actualObject = JsonReader.readIS(response.asInputStream(), Product.class);
         Assert.assertEquals(actualObject, expectedObject, "Objects aren't equal!");
     }
 
     @Test
     @Description("Verifying Status code and Response of POST method test")
     public void postTest() throws JsonValidateException {
-        User expectedObject = JsonReader.readFile(new File(postPath), User.class);
+        Product expectedObject = JsonReader.readFile(new File(postPath), Product.class);
         Response response = given()
                 .when().contentType(ContentType.JSON)
                 .and().body(ServiceActions.putRequestBody(expectedObject).toString())
                 .when().post(postUrl)
                 .then().statusCode(200)
                 .and().extract().response();
-        User actualObject = JsonReader.readIS(response.asInputStream(), User.class);
+        Product actualObject = JsonReader.readIS(response.asInputStream(), Product.class);
         Assert.assertEquals(actualObject, expectedObject, "Objects aren't equal!");
     }
 
     @Test
     @Description("Verifying Status code and Response of PUT method test")
     public void putTest() throws JsonValidateException {
-        User expectedObject = JsonReader.readFile(new File(putPath), User.class);
+        Product expectedObject = JsonReader.readFile(new File(putPath), Product.class);
         Response response = given()
                 .when().contentType(ContentType.JSON)
                 .when().body(ServiceActions.putRequestBody(expectedObject).toString())
                 .when().put(putUrl)
                 .then().statusCode(200)
                 .and().extract().response();
-        User actualObject = JsonReader.readIS(response.asInputStream(), User.class);
+        Product actualObject = JsonReader.readIS(response.asInputStream(), Product.class);
         Assert.assertEquals(actualObject, expectedObject, "Objects aren't equal!");
     }
 
