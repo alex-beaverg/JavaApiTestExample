@@ -25,20 +25,20 @@ import static io.restassured.RestAssured.*;
 @Epic("API CRUD operations testing")
 @Feature("'dummyjson.com' API products testing")
 public class DummyJsonProductsTest {
-    private final String dummyJsonUrl = PropertyGetter.getProperty("dummy_json_products_url");
-    private final String path = PropertyGetter.getProperty("dummy_json_file_products_path");
+    private final String url = PropertyGetter.getProperty("dj.products_url");
+    private final String path = PropertyGetter.getProperty("dj.products_path");
 
-    private final String urlGetPostfix = PropertyGetter.getData("dummy_json_get");
-    private final String urlPostPostfix = PropertyGetter.getData("dummy_json_post");
-    private final String urlPutPostfix = PropertyGetter.getData("dummy_json_put");
-    private final String urlDelPostfix = PropertyGetter.getData("dummy_json_del");
-    private final String getPath = path + PropertyGetter.getData("get_name");
-    private final String postPath = path + PropertyGetter.getData("post_name");
-    private final String putPath = path + PropertyGetter.getData("put_name");
+    private final String getUrl = PropertyGetter.getData("dj.get");
+    private final String postUrl = PropertyGetter.getData("dj.post");
+    private final String putUrl = PropertyGetter.getData("dj.put");
+    private final String delUrl = PropertyGetter.getData("dj.del");
+    private final String getPath = path + PropertyGetter.getData("get_file");
+    private final String postPath = path + PropertyGetter.getData("post_file");
+    private final String putPath = path + PropertyGetter.getData("put_file");
 
     @BeforeMethod(alwaysRun = true)
     public void setup() {
-        RestAssured.baseURI = dummyJsonUrl;
+        RestAssured.baseURI = url;
     }
 
     @AfterMethod(alwaysRun = true)
@@ -54,7 +54,7 @@ public class DummyJsonProductsTest {
     @Description("Verifying Status code and Response of GET method test")
     public void getTest() throws JsonValidateException {
         Response response = given()
-                .when().get(urlGetPostfix)
+                .when().get(getUrl)
                 .then().statusCode(200)
                 .and().extract().response();
         Product expectedObject = JsonReader.readFile(new File(getPath), Product.class);
@@ -69,7 +69,7 @@ public class DummyJsonProductsTest {
         Response response = given()
                 .when().contentType(ContentType.JSON)
                 .and().body(ServiceActions.putRequestBody(expectedObject).toString())
-                .when().post(urlPostPostfix)
+                .when().post(postUrl)
                 .then().statusCode(200)
                 .and().extract().response();
         Product actualObject = JsonReader.readIS(response.asInputStream(), Product.class);
@@ -83,7 +83,7 @@ public class DummyJsonProductsTest {
         Response response = given()
                 .when().contentType(ContentType.JSON)
                 .when().body(ServiceActions.putRequestBody(expectedObject).toString())
-                .when().put(urlPutPostfix)
+                .when().put(putUrl)
                 .then().statusCode(200)
                 .and().extract().response();
         Product actualObject = JsonReader.readIS(response.asInputStream(), Product.class);
@@ -95,7 +95,7 @@ public class DummyJsonProductsTest {
     public void deleteTest() {
         RestAssured.given()
                 .when().contentType(ContentType.JSON)
-                .when().delete(urlDelPostfix)
+                .when().delete(delUrl)
                 .then().statusCode(200)
                 .and().extract().response();
     }

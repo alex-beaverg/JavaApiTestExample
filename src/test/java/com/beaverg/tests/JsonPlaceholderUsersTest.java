@@ -25,16 +25,16 @@ import static io.restassured.RestAssured.given;
 @Epic("API CRUD operations testing")
 @Feature("'jsonplaceholder.typicode.com' API users testing")
 public class JsonPlaceholderUsersTest {
-    private final String url = PropertyGetter.getProperty("json_placeholder_users_url");
-    private final String path = PropertyGetter.getProperty("json_placeholder_users_filepath");
+    private final String url = PropertyGetter.getProperty("jp.users_url");
+    private final String path = PropertyGetter.getProperty("jp.users_path");
 
-    private final String urlGetPostfix = PropertyGetter.getData("json_placeholder_get");
-    private final String urlPostPostfix = PropertyGetter.getData("json_placeholder_post");
-    private final String urlPutPostfix = PropertyGetter.getData("json_placeholder_put");
-    private final String urlDelPostfix = PropertyGetter.getData("json_placeholder_del");
-    private final String getPath = path + PropertyGetter.getData("get_name");
-    private final String postPath = path + PropertyGetter.getData("post_name");
-    private final String putPath = path + PropertyGetter.getData("put_name");
+    private final String getUrl = PropertyGetter.getData("jp.get");
+    private final String postUrl = PropertyGetter.getData("jp.post");
+    private final String putUrl = PropertyGetter.getData("jp.put");
+    private final String delUrl = PropertyGetter.getData("jp.del");
+    private final String getPath = path + PropertyGetter.getData("get_file");
+    private final String postPath = path + PropertyGetter.getData("post_file");
+    private final String putPath = path + PropertyGetter.getData("put_file");
 
     @BeforeMethod(alwaysRun = true)
     public void setup() {
@@ -54,7 +54,7 @@ public class JsonPlaceholderUsersTest {
     @Description("Verifying Status code and Response of GET method test")
     public void getTest() throws JsonValidateException {
         Response response = given()
-                .when().get(urlGetPostfix)
+                .when().get(getUrl)
                 .then().statusCode(200)
                 .and().extract().response();
         User expectedObject = JsonReader.readFile(new File(getPath), User.class);
@@ -69,7 +69,7 @@ public class JsonPlaceholderUsersTest {
         Response response = given()
                 .when().contentType(ContentType.JSON)
                 .and().body(ServiceActions.putRequestBody(expectedObject).toString())
-                .when().post(urlPostPostfix)
+                .when().post(postUrl)
                 .then().statusCode(201)
                 .and().extract().response();
         User actualObject = JsonReader.readIS(response.asInputStream(), User.class);
@@ -83,7 +83,7 @@ public class JsonPlaceholderUsersTest {
         Response response = given()
                 .when().contentType(ContentType.JSON)
                 .when().body(ServiceActions.putRequestBody(expectedObject).toString())
-                .when().put(urlPutPostfix)
+                .when().put(putUrl)
                 .then().statusCode(200)
                 .and().extract().response();
         User actualObject = JsonReader.readIS(response.asInputStream(), User.class);
@@ -95,7 +95,7 @@ public class JsonPlaceholderUsersTest {
     public void deleteTest() {
         RestAssured.given()
                 .when().contentType(ContentType.JSON)
-                .when().delete(urlDelPostfix)
+                .when().delete(delUrl)
                 .then().statusCode(200)
                 .and().extract().response();
     }
