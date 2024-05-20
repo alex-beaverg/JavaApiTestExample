@@ -96,7 +96,6 @@ public class ProductsTest {
         RestAssured.given()
                 .when().contentType(ContentType.JSON)
                 .when().delete(delUrl)
-                .then().statusCode(200)
-                .and().extract().response();
+                .then().statusCode(200);
     }
 }
