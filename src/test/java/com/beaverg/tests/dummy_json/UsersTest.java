@@ -70,7 +70,7 @@ public class UsersTest {
                 .when().contentType(ContentType.JSON)
                 .and().body(ServiceActions.putRequestBody(expectedObject).toString())
                 .when().post(postUrl)
-                .then().statusCode(200)
+                .then().statusCode(201)
                 .and().extract().response();
         User actualObject = JsonReader.readIS(response.asInputStream(), User.class);
         Assert.assertEquals(actualObject, expectedObject, "Objects aren't equal!");

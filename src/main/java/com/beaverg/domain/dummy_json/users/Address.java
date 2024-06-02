@@ -6,10 +6,28 @@ public class Address {
     private String address;
     private String city;
     private Coordinates coordinates;
+    private String stateCode;
     private String postalCode;
     private String state;
+    private String country;
 
     public Address() { }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getStateCode() {
+        return stateCode;
+    }
+
+    public void setStateCode(String stateCode) {
+        this.stateCode = stateCode;
+    }
 
     public String getAddress() {
         return address;
@@ -58,13 +76,15 @@ public class Address {
         Address address1 = (Address) o;
         return Objects.equals(address, address1.address) &&
                 Objects.equals(city, address1.city) &&
+                Objects.equals(country, address1.country) &&
                 Objects.equals(coordinates, address1.coordinates) &&
+                Objects.equals(stateCode, address1.stateCode) &&
                 Objects.equals(postalCode, address1.postalCode) &&
                 Objects.equals(state, address1.state);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(address, city, coordinates, postalCode, state);
+        return Objects.hash(address, city, coordinates, postalCode, state, stateCode, country);
     }
 }

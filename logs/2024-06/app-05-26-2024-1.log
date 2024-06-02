@@ -1,0 +1,10 @@
+2024-05-26 09:34:46,105 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API products testing-1] Test 'getTest' was failed!
+2024-05-26 09:34:46,877 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API products testing-1] Test 'postTest' was failed!
+2024-05-26 09:34:47,485 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API products testing-1] Test 'putTest' was failed!
+2024-05-26 09:34:48,618 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API users testing-1] Test 'getTest' was failed!
+2024-05-26 09:34:49,173 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API users testing-1] Test 'postTest' was failed!
+2024-05-26 09:37:10,640 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API products testing-1] Test 'getTest' was failed!
+2024-05-26 09:37:11,257 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API products testing-1] Test 'postTest' was failed!
+2024-05-26 09:37:11,864 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API products testing-1] Test 'putTest' was failed!
+2024-05-26 09:37:13,025 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API users testing-1] Test 'getTest' was failed!
+2024-05-26 09:37:13,567 ERROR c.b.l.TestNGListener [TestNG-test='dummyjson.com' API users testing-1] Test 'postTest' was failed!

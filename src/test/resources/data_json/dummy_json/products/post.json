@@ -1,16 +1,14 @@
 {
-  "id": 101,
-  "title": "Men Shoes",
-  "description": "2024 New Balance Winter Men Shoes 580",
-  "price": 48,
-  "discountPercentage": 14.15,
-  "rating": 4.87,
-  "stock": 26,
-  "brand": "New Balance",
-  "category": "men-shoes",
-  "thumbnail": "https://cdn.dummyjson.com/product-images/101/thumbnail.jpg",
+  "id": 195,
+  "title": "Black Whisk",
+  "price": 9.99,
+  "discountPercentage": 16.87,
+  "stock": 17,
+  "rating": 2.88,
   "images": [
-    "https://cdn.dummyjson.com/product-images/101/1.jpeg",
-    "https://cdn.dummyjson.com/product-images/101/2.jpg"
-  ]
+    "https://cdn.dummyjson.com/products/images/kitchen-accessories/Black%20Whisk/1.png"
+  ],
+  "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Black%20Whisk/thumbnail.png",
+  "description": "The Black Whisk is a kitchen essential for whisking and beating ingredients. Its ergonomic handle and sleek design make it a practical and stylish tool.",
+  "category": "kitchen-accessories"
 }

@@ -1,66 +1,70 @@
 {
   "id": 50,
-  "firstName": "Johnathon",
-  "lastName": "Predovic",
-  "maidenName": "Will",
-  "age": 18,
-  "gender": "male",
-  "email": "xlinster1d@bravesites.com",
-  "phone": "+351 572 534 5789",
-  "username": "xlinster1d",
-  "password": "WHAE1AtmDh",
-  "birthDate": "1965-03-22",
-  "image": "https://robohash.org/Johnathon.png?set=set4",
-  "bloodGroup": "B-",
-  "height": 160,
-  "weight": 75.7,
-  "eyeColor": "Amber",
+  "firstName": "Stella",
+  "lastName": "Hughes",
+  "maidenName": "",
+  "age": 33,
+  "gender": "female",
+  "email": "stella.hughes@x.dummyjson.com",
+  "phone": "+92 378-326-3439",
+  "username": "stellah",
+  "password": "stellahpass",
+  "birthDate": "1991-11-6",
+  "image": "https://dummyjson.com/icon/stellah/128",
+  "bloodGroup": "A-",
+  "height": 171.2,
+  "weight": 81.45,
+  "eyeColor": "Brown",
   "hair": {
-    "color": "Blond",
+    "color": "Blue",
     "type": "Straight"
   },
-  "domain": "booking.com",
-  "ip": "203.203.88.16",
+  "ip": "201.29.33.153",
   "address": {
-    "address": "416 McIver Street",
-    "city": "Nashville",
+    "address": "926 Elm Street",
+    "city": "Jacksonville",
+    "state": "New Hampshire",
+    "stateCode": "NH",
+    "postalCode": "24463",
     "coordinates": {
-      "lat": 36.10436,
-      "lng": -86.74411599999999
+      "lat": -29.825372,
+      "lng": 116.639085
     },
-    "postalCode": "37211",
-    "state": "TN"
+    "country": "United States"
   },
-  "macAddress": "42:A3:F3:72:BA:9A",
-  "university": "Instituto Politécnico de Coimbra",
+  "macAddress": "29:78:ea:4:44:a5",
+  "university": "University of California--San Diego",
   "bank": {
-    "cardExpire": "11/22",
-    "cardNumber": "3566999107446018",
-    "cardType": "jcb",
-    "currency": "Euro",
-    "iban": "GE83 VQ05 7695 5638 2069 95"
+    "cardExpire": "01/26",
+    "cardNumber": "6288370557661493",
+    "cardType": "RuPay International",
+    "currency": "INR",
+    "iban": "SH1UHKUCEMW3OCALA3C9SBR5"
   },
   "company": {
+    "department": "Research and Development",
+    "name": "Ernser Group",
+    "title": "Database Administrator",
     "address": {
-      "address": "172 Alburg Springs Road",
-      "city": "Alburgh",
+      "address": "1869 Jefferson Street",
+      "city": "Indianapolis",
+      "state": "Montana",
+      "stateCode": "MT",
+      "postalCode": "65401",
       "coordinates": {
-        "lat": 44.995827,
-        "lng": -73.2201539
+        "lat": -26.748208,
+        "lng": -12.086179
       },
-      "postalCode": "05440",
-      "state": "VT"
-    },
-    "department": "Engineering",
-    "name": "Borer and Sons",
-    "title": "Assistant Professor"
+      "country": "United States"
+    }
   },
-  "ein": "60-0161254",
-  "ssn": "336-16-4564",
-  "userAgent": "Mozilla/5.0 (Windows NT 5.2; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.41 Safari/535.1",
+  "ein": "323-682",
+  "ssn": "970-230-310",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0",
   "crypto": {
     "coin": "Bitcoin",
-    "wallet": "0xb9fe6979a82fb43fdd9ba9f446846dc4dfca3deb",
+    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
     "network": "Ethereum (ERC20)"
-  }
+  },
+  "role": "user"
 }

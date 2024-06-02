@@ -19,7 +19,7 @@ public class User {
     private String birthDate;
     private String image;
     private String bloodGroup;
-    private int height;
+    private double height;
     private double weight;
     private String eyeColor;
     private Hair hair;
@@ -34,8 +34,17 @@ public class User {
     private String ssn;
     private String userAgent;
     private Crypto crypto;
+    private String role;
 
     public User() { }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public int getId() {
         return id;
@@ -141,11 +150,11 @@ public class User {
         this.bloodGroup = bloodGroup;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 
@@ -268,7 +277,7 @@ public class User {
         User user = (User) o;
         return id == user.id &&
                 age == user.age &&
-                height == user.height &&
+                Double.compare(user.height, height) == 0 &&
                 Double.compare(user.weight, weight) == 0 &&
                 Objects.equals(firstName, user.firstName) &&
                 Objects.equals(lastName, user.lastName) &&
@@ -293,13 +302,14 @@ public class User {
                 Objects.equals(ein, user.ein) &&
                 Objects.equals(ssn, user.ssn) &&
                 Objects.equals(userAgent, user.userAgent) &&
-                Objects.equals(crypto, user.crypto);
+                Objects.equals(crypto, user.crypto) &&
+                Objects.equals(role, user.role);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id, firstName, lastName, maidenName, age, gender, email, phone, username, password,
                 birthDate, image, bloodGroup, height, weight, eyeColor, hair, domain, ip, address, macAddress,
-                university, bank, company, ein, ssn, userAgent, crypto);
+                university, bank, company, ein, ssn, userAgent, crypto, role);
     }
 }
